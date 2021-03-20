@@ -1,4 +1,4 @@
-# the_grey_wolf
+The Grey Wolf
 
 This is a webpage about Grey Wolves with interesting information about the different subspecies and the behaviors common amongst them.
 
