@@ -1,0 +1,246 @@
+/*
+
+File Name: style.less
+Date: 02/26/21
+Programmer: Hunter Barnes
+
+*/
+
+@import 'palette.less';
+@import 'mixins.less';
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5em;
+    background-color: @lightColor;
+    color: @darkColor;
+}
+
+header {
+    background-image: url("../images/eurasianwolf.jpeg");
+    background-color: @lightColor;
+    height: auto;
+    background-position: center;
+    background-repeat: none;
+    margin-bottom: -.01em;
+    
+    h1 {
+        .headingStyle(Georgia, "Times New Roman", Times, serif; @lightColor5; 3em);
+        text-align: center;
+        margin-top: -.3em;
+        margin-bottom: -.8em;
+    }
+
+    nav {
+        padding-bottom: .5em;
+        ul {
+            text-align: center;
+
+            li {
+                font-size: 1.2em;
+                list-style-type: none;
+
+                a {
+                    color: @lightColor5;
+                    text-decoration: none;
+                }
+                a:active {
+                    color: @color4;
+                    text-decoration: underline;
+                }
+                a:hover {
+                    color: @lightColor4;
+                    font-size: 1.4em;
+                }
+                a:visited {
+                    color: @lightColor;
+                }
+            }
+        }
+    }
+}
+
+main {
+    background-color: @color4;
+    padding-top: .5em;
+    padding-bottom: 1em;
+    margin-top: -.5em;
+    
+    h2 {
+        .headingStyle(Georgia, "Times New Roman", Times, serif; @color1; 1.8em);
+        padding-left: .2em;
+        margin-bottom: .1em;
+        padding-top: .1em;
+    }
+    
+    h3 {
+        .headingStyle(Georgia, "Times New Roman", Times, serif; @color1; 1.6em);
+        padding-left: 1em;
+        margin-bottom: .1em;
+        padding-top: .1em;
+    }
+    
+    h4 {
+        .headingStyle(Georgia, "Times New Roman", Times, serif; @color1; 1.3em);
+        padding-left: .8em;
+        margin-bottom: .1em;
+        padding-top: .1em;
+        font-weight: 600;
+    }
+    
+    ul {
+        padding-left: .6em;
+    }
+    
+    p {
+        margin-top: .3em;
+        padding-left: .6em;
+    }
+    
+    .nice_photo_with_caption {
+        background-color: @color5;
+        width: 90%;
+        margin: 0 auto;
+        .dropShadow(3px; 3px; 2px; @darkColor5);
+        margin-top: .6em;
+        
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 90%;
+            padding-top: 1em;
+            padding-bottom: 1em;
+            border-radius: 15%;
+        }
+        
+        figcaption {
+            text-align: center;
+            color: @lightColor;
+            border-top: @lightColor dashed 1px;
+            padding-top: .5em;
+            padding-bottom: .2em;
+        }
+    }
+}
+
+footer {
+    text-align: center;
+    margin-top: -.5em;
+    .linearGrad(bottom; @color4; @lightColor);
+    h2 {
+        .headingStyle(Georgia, "Times New Roman", Times, serif; @color2; 1em);
+        padding-top: .5em;
+    }
+    
+    ul {
+        font-size: .8em;
+        margin-top: .1em;
+        li {
+            display: inline;
+            margin: .1em;
+            a {
+                color: @color3;
+            }
+            a:active {
+                color: @darkColor3
+            }
+            a:visited {
+                color: @greyColor3;
+            }
+            a:hover {
+                color: @color2;
+                font-size: 1em;
+            }
+        }
+    }
+    
+    p {
+        font-size: .8em;
+        font-style: italic;
+    }
+}
+
+
+/*
+
+TABLET STYLESHEET
+
+The following CSS affects all screen sizes larger than 480 pixels wide.
+
+*/
+
+@media only screen and (min-width: 481px) {
+    body {
+        font-size: 18px;
+        line-height: 1.75em;
+    }
+    
+    header {
+        nav {
+            ul {
+                li {
+                    display: inline;
+                    padding-left: 1em;
+                    padding-right: 1em;
+                }
+            }
+        }
+    }
+    
+    main {
+        h2 {
+            text-align: center;
+        }
+        
+        p {
+            padding-left: 2em;
+            padding-right: 1em;
+        }
+        
+        .nice_photo_with_caption {
+            width: 75%;
+        }
+    }
+    
+    footer {
+        ul {
+            line-height: 1.4em;
+            li {
+                display: block;
+            }
+        }
+    }
+}
+
+/*
+
+DESKTOP STYLESHEET
+
+The following CSS affects all screen sizes larger than 1024 pixels wide.
+
+*/
+
+@media only screen and (min-width: 1025px) {
+    body {
+        font-size: 20px;
+    }
+    
+    header {
+        margin-bottom: .5em;
+    }
+    
+    main {
+        ul {
+            padding-left: 2.5em;
+        }
+    }
+    
+    footer {
+        ul {
+            li {
+                display: block;
+            }
+        }
+    }
+}

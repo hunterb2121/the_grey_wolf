@@ -1,0 +1,68 @@
+// out: null
+
+/* Parametric mixin for headings */
+.headingStyle(@paramFont: Arial, Helvetica, sans-serif; @paramColor: #000; @paramSize: 2em) {
+    font-family: @paramFont;
+    color: @paramColor;
+    font-size: @paramSize;
+    font-weight: bold;
+    line-height: @paramSize;
+    margin-top: @paramSize / 3;
+    margin-bottom: @paramSize / 3;
+    text-transform: uppercase;
+}
+/* End Parametic mixin for headings */
+
+.roundedColors(@paramRadius: 50%; @paramColor: #FFF) {
+    border-radius: @paramRadius;
+    background-color: @paramColor;
+}
+
+.dropShadow(@paramX: .5px; @paramY: .5px; @paramBlur: .3px; @paramColor: #000) {
+    box-shadow: @paramX @paramY @paramBlur @paramColor;
+}
+
+.linearGrad(@paramDirection: left; @paramColor1: #CCC; @paramColor2: #AAA) {
+    background: @paramColor1;
+    background-image: linear-gradient(to @paramDirection, @paramColor1, @paramColor2);
+}
+
+.expand() {
+    transform: scale(1.1);
+    display: inline-block;
+}
+
+.half_transparent() {
+    opacity: 0.5;
+}
+
+.under_italics() {
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.upper_bold() {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.img_flip() {
+    transform: scaleX(-1);
+}
+
+.circle() {
+    border-radius: 50%;
+}
+
+.bold_under() {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.no_list_disk() {
+    list-style: none;
+}
+
+.shadow() {
+    box-shadow: 5px 5px 3px;
+}
